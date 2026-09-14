@@ -8,6 +8,7 @@ Escribe **negrita**, *cursiva* o [enlaces](https://markdown.es) sin tocar un sol
 - GitHub para versionar
 - HTML5% para el maquetado
 - CSS3 para los estilos
+- JAVA SCRIPT como lenguaje de programacion
 
 1. Numerada
 2. Y sigue
