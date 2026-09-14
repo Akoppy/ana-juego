@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    background: rgb(101, 68, 121);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    touch-action: none;
+}
+
+.game-wrapper{
+    background: rgb(173, 119, 224);
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: o 20px 30px grey;
+    border: 2px solid purple;
+}
