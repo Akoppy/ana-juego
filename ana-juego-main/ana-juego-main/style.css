@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    background: rgb(152, 233, 233);
+    background: rgb(126, 93, 146);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    touch-action: none;
+}
+
+.game-wrapper{
+    background: bisque;
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow:o 20px 30px rrgb(196, 144, 144);
+    border: 2px rgb(106, 98, 112);
+    border: 2px solid rgba(0, 0, 0, 0.884);
+
+}
+canvas{
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 400/500;
+    background: rgb(255, 255, 255);
+    border-radius: 1.2rem;
+    margin: 0 auto;
+    box-shadow: inset 0 0 20px rgb(78, 43, 92) ;
+    image-rendering: pixelated;
+    touch-action: none;
+    cursor: pointer;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 6px 4px 6px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    text-shadow: 0 0 6px ;
+    letter-spacing: 1px;
+}
+.score span{
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    margin-left: 6px;
+
+}
+button{
+    background: rgb(0, 4, 12);
+    border: none;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border-radius: 10px;
+    box-shadow:0 5px 0 rgba(61, 40, 63, 0.918);
+    transition: all;
+    letter-spacing: 1px;
+    touch-action: manipulation;
+    border: 1px solid rgb(74, 54, 82);
+}
+
+button:active{
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 rgb(78, 60, 78);
+}
+
+.controls-note{
+    color: darksalmon;
+    font-size: medium;
+    margin: 6px 6px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+@media (max-width:500px){
+    .game-wrapper{padding: 0.5rem;}
+    .info{font-size: 1rem;}
+    .score span {font-size: 1.5rem;}
+    button {font-size: 1rem;padding: 6px 16px;}
+}
