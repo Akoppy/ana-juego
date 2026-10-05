@@ -24,11 +24,11 @@ const ENEMY_W = 26;
 const ENEMY_H = 20;
 const ENEMY_SPACING = 12;
 let enemyDirection = 1;
-let enemySpeed = 0.8;
+let enemySpeed = 20;
 let enemyMoveCounter = 0;
-const ENEMY_MOVE_FRAMES = 12;
+const ENEMY_MOVE_FRAMES = 20;
 
-let shootCooldown = 0;
+let shootCooldown = 2;
 const SHOOT_DELAY = 14;
 
 // ---- INICIALIZAR ENEMIGOS ----
@@ -49,8 +49,8 @@ function initEnemies() {
         }
     }
     enemyDirection = 1;
-    enemySpeed = 0.8;
-    enemyMoveCounter = 0;
+    enemySpeed = 10;
+    enemyMoveCounter = 2;
 }
 
 // ---- REINICIAR ----
@@ -77,6 +77,7 @@ function shootBullet() {
         w: 6,
         h: 14,
         speed: 5
+
     });
 }
 
