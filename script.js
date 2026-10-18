@@ -57,12 +57,12 @@ function resetGame() {
     player.y = CH / 2;
     player.angle = -Math.PI / 2;
     player.lives = 3;
-    player.invincible = 0;
+    player.invincible = 1;
     bullets = [];
     score = 0;
     gameOver = false;
     keys = { left: false, right: false, up: false, down: false };
-    shootCooldown = 0;
+    shootCooldown = 2;
     pointerActive = false;
     initEnemies();
     updateScore();
@@ -72,10 +72,10 @@ function resetGame() {
 // CAMBIO 6: la bala sale en la dirección del ángulo
 function shootBullet() {
     if (gameOver || player.lives <= 0) return;
-    const speed = 7;
+    const speed = 4;
     bullets.push({
-        x: player.x + Math.cos(player.angle) * 18,
-        y: player.y + Math.sin(player.angle) * 18,
+        x: player.x + Math.cos(player.angle) * 10,
+        y: player.y + Math.sin(player.angle) * 10,
         vx: Math.cos(player.angle) * speed,
         vy: Math.sin(player.angle) * speed,
         life: 50
