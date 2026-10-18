@@ -1,113 +1,31 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-user-select: none;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ana 😸 - Nave 360°</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <canvas id="gameCanvas" width="400" height="500"></canvas>
 
-body{
-    background: rgb(76, 53, 90);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    touch-action: none;
-    overflow: hidden;
-}
+        <div class="info">
+            <div class="score">
+                <span id="scoreDisplay">0</span>
+                <button id="resetBtn">☠️ Reiniciar</button>
+            </div>
+            <div class="lives" id="livesDisplay">
+                ❤️ ❤️ ❤️
+            </div>
+        </div>
 
-.game-wrapper{
-    background: rgb(155, 121, 170);
-    padding: 1rem 1rem 1.2rem;
-    border-radius: 2rem;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.45);
-    border: 2px solid rgba(0, 0, 0, 0.85);
-    max-width: 96vw;
-}
+        <div class="controls-note">
+            <span>PC: flechas / WASD · móvil: toca y arrastra</span>
+            <span>Disparo automático · 3 vidas</span>
+        </div>
+    </div>
 
-canvas{
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 400/500;
-    background: #0b111f;
-    border-radius: 1.2rem;
-    margin: 0 auto;
-    box-shadow: inset 0 0 20px rgb(78, 43, 92);
-    image-rendering: pixelated;
-    touch-action: none;
-    cursor: crosshair;
-}
-
-.info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 8px 4px 4px;
-    color: #111;
-    font-weight: bold;
-    font-size: 1.25rem;
-    letter-spacing: 1px;
-    gap: 8px;
-}
-
-.score{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.score span{
-    color: #111;
-    font-size: 1.7rem;
-    min-width: 2.5rem;
-    text-align: right;
-}
-
-.lives{
-    font-size: 1.35rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px rgba(255, 80, 80, 0.6);
-}
-
-button{
-    background: rgb(0, 4, 12);
-    border: 1px solid rgb(74, 54, 82);
-    color: aliceblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.05rem;
-    padding: 6px 14px;
-    border-radius: 10px;
-    box-shadow: 0 5px 0 rgba(61, 40, 63, 0.9);
-    transition: transform 0.08s, box-shadow 0.08s;
-    letter-spacing: 1px;
-    touch-action: manipulation;
-    cursor: pointer;
-}
-
-button:active{
-    transform: translateY(4px);
-    box-shadow: 0 1px 0 rgb(78, 60, 78);
-}
-
-.controls-note{
-    color: #5c3d4a;
-    font-size: 0.85rem;
-    margin-top: 6px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px 14px;
-    text-align: center;
-}
-
-@media (max-width: 500px){
-    .game-wrapper{ padding: 0.55rem; }
-    .info{ font-size: 1rem; }
-    .score span{ font-size: 1.4rem; }
-    .lives{ font-size: 1.15rem; }
-    button{ font-size: 0.95rem; padding: 5px 12px; }
-    .controls-note{ font-size: 0.75rem; }
-}
+    <script src="./script.js"></script>
+</body>
+</html>
