@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    -webkit-user-select: none;
 }
 
 body{
-    background: rgb(103, 158, 158);
     background: rgb(76, 53, 90);
     min-height: 100vh;
     display: flex;
@@ -14,63 +14,77 @@ body{
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     touch-action: none;
+    overflow: hidden;
 }
 
 .game-wrapper{
     background: rgb(155, 121, 170);
-    padding: 1rem 1rem 1.5rem;
+    padding: 1rem 1rem 1.2rem;
     border-radius: 2rem;
-    box-shadow:o 20px 30px rrgb(196, 144, 144);
-    border: 2px rgb(152, 138, 163);
-    border: 2px solid rgba(0, 0, 0, 0.884);
-
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(0, 0, 0, 0.85);
+    max-width: 96vw;
 }
+
 canvas{
     display: block;
     width: 100%;
-    max-width: 480px;
+    max-width: 400px;
     aspect-ratio: 400/500;
-    background: rgb(156, 91, 91);
+    background: #0b111f;
     border-radius: 1.2rem;
     margin: 0 auto;
-    box-shadow: inset 0 0 20px rgb(78, 43, 92) ;
+    box-shadow: inset 0 0 20px rgb(78, 43, 92);
     image-rendering: pixelated;
     touch-action: none;
-    cursor: pointer;
+    cursor: crosshair;
 }
 
 .info{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4px 6px 4px 6px;
-    color: rgb(0, 0, 0);
+    margin: 8px 4px 4px;
+    color: #111;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.3rem;
-    text-shadow: 0 0 6px ;
+    font-size: 1.25rem;
     letter-spacing: 1px;
+    gap: 8px;
 }
-.score span{
-    color: rgb(0, 0, 0);
-    font-size: 1.8rem;
-    margin-left: 6px;
 
+.score{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+.score span{
+    color: #111;
+    font-size: 1.7rem;
+    min-width: 2.5rem;
+    text-align: right;
+}
+
+.lives{
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 80, 80, 0.6);
+}
+
 button{
     background: rgb(0, 4, 12);
-    border: none;
+    border: 1px solid rgb(74, 54, 82);
     color: aliceblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 2px 5px;
+    font-size: 1.05rem;
+    padding: 6px 14px;
     border-radius: 10px;
-    box-shadow:0 5px 0 rgba(61, 40, 63, 0.918);
-    transition: all;
+    box-shadow: 0 5px 0 rgba(61, 40, 63, 0.9);
+    transition: transform 0.08s, box-shadow 0.08s;
     letter-spacing: 1px;
     touch-action: manipulation;
-    border: 1px solid rgb(74, 54, 82);
+    cursor: pointer;
 }
 
 button:active{
@@ -79,17 +93,21 @@ button:active{
 }
 
 .controls-note{
-    color: darksalmon;
-    font-size: medium;
-    margin: 6px 6px 0;
+    color: #5c3d4a;
+    font-size: 0.85rem;
+    margin-top: 6px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
+    gap: 6px 14px;
+    text-align: center;
 }
-@media (max-width:500px){
-    .game-wrapper{padding: 0.5rem;}
-    .info{font-size: 1rem;}
-    .score span {font-size: 1.5rem;}
-    button {font-size: 1rem;padding: 6px 16px;}
+
+@media (max-width: 500px){
+    .game-wrapper{ padding: 0.55rem; }
+    .info{ font-size: 1rem; }
+    .score span{ font-size: 1.4rem; }
+    .lives{ font-size: 1.15rem; }
+    button{ font-size: 0.95rem; padding: 5px 12px; }
+    .controls-note{ font-size: 0.75rem; }
 }
