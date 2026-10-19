@@ -28,11 +28,11 @@ let gameOver = false;
 let keys = { left: false, right: false, up: false, down: false };
 
 // CAMBIO 3: enemigos aparecen desde los bordes
-let spawnTimer = 1;
+let spawnTimer = 0;
 const SPAWN_INTERVAL = 55;
 const MAX_ENEMIES = 14;
 
-let shootCooldown = 0;
+let shootCooldown = 5;
 const SHOOT_DELAY = 12;
 
 let pointerActive = false;
@@ -49,7 +49,7 @@ function angleTo(x1, y1, x2, y2) {
 
 function initEnemies() {
     enemies = [];
-    spawnTimer = 5;
+    spawnTimer = 0;
 }
 
 function resetGame() {
@@ -72,7 +72,7 @@ function resetGame() {
 // CAMBIO 6: la bala sale en la dirección del ángulo
 function shootBullet() {
     if (gameOver || player.lives <= 0) return;
-    const speed = 2;
+    const speed = 6;
     bullets.push({
         x: player.x + Math.cos(player.angle) * 10,
         y: player.y + Math.sin(player.angle) * 10,
@@ -182,7 +182,7 @@ function update() {
 
     spawnTimer++;
     if (spawnTimer >= SPAWN_INTERVAL) {
-        spawnTimer = 0;
+        spawnTimer = 2;
         spawnEnemy();
         if (score > 120 && Math.random() < 0.3) spawnEnemy();
     }
