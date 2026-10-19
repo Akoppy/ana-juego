@@ -132,7 +132,7 @@ function update() {
 
     let moveX = 0;
     let moveY = 0;
-    const SPEED = 4.5;
+    const SPEED = 3;
 
     if (keys.left)  moveX -= 1;
     if (keys.right) moveX += 1;
