@@ -30,7 +30,7 @@ let keys = { left: false, right: false, up: false, down: false };
 // CAMBIO 3: enemigos aparecen desde los bordes
 let spawnTimer = 0;
 const SPAWN_INTERVAL = 70;
-const MAX_ENEMIES = 10;
+const MAX_ENEMIES = 5;
 
 let shootCooldown = 20;
 const SHOOT_DELAY = 22;
@@ -49,7 +49,7 @@ function angleTo(x1, y1, x2, y2) {
 
 function initEnemies() {
     enemies = [];
-    spawnTimer = 0;
+    spawnTimer = 10;
 }
 
 function resetGame() {
