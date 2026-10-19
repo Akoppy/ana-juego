@@ -29,10 +29,10 @@ let keys = { left: false, right: false, up: false, down: false };
 
 // CAMBIO 3: enemigos aparecen desde los bordes
 let spawnTimer = 0;
-const SPAWN_INTERVAL = 55;
+const SPAWN_INTERVAL = 40;
 const MAX_ENEMIES = 14;
 
-let shootCooldown = 7;
+let shootCooldown = 5;
 const SHOOT_DELAY = 7;
 
 let pointerActive = false;
