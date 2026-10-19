@@ -32,8 +32,8 @@ let spawnTimer = 0;
 const SPAWN_INTERVAL = 40;
 const MAX_ENEMIES = 14;
 
-let shootCooldown = 5;
-const SHOOT_DELAY = 7;
+let shootCooldown = 10;
+const SHOOT_DELAY = 12;
 
 let pointerActive = false;
 let pointerX = 0;
