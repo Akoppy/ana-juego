@@ -113,7 +113,7 @@ function spawnEnemy() {
     const tx = CW / 2 + (Math.random() - 0.5) * 100;
     const ty = CH / 2 + (Math.random() - 0.5) * 100;
     const ang = angleTo(x, y, tx, ty);
-    const spd = 0.8 + Math.random() * 1.0 + Math.min(score / 350, 1.2);
+    const spd = 0.8 + Math.random() * 1.0 + Math.min(score / 350, 1.0);
 
     const colors = ['#f2b84b', '#d96c4a', '#6bb0d9', '#c77dff'];
     enemies.push({
